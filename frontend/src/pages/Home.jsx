@@ -1,19 +1,14 @@
-import React from 'react'
-import Header from '../components/Header'
-import SpecialityMenu from '../components/SpecialityMenu'
-import TopDoctors from '../components/TopDoctors'
-import Banner from '../components/Banner'
+import React from "react";
+import styles from "../styles/Home.module.css";
 
-
-const Home = () => {
+export default function Home() {
   return (
-    <div>
-      <Header />
-      <SpecialityMenu />
-      <TopDoctors />
-      <Banner />
+    <div className={styles.home}>
+      <div>
+        <marquee className={styles.marquee}>BM Hospital</marquee>
+        <h1>Welcome to BM Hospital</h1>
+        <p>Book your doctor appointments easily online</p>
+      </div>
     </div>
-  )
+  );
 }
-
-export default Home

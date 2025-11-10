@@ -1,0 +1,59 @@
+.doctorListContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #121212;
+  min-height: 100vh;
+  justify-items: center;
+}
+
+.doctorCard {
+  background: #1f1f1f;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+.doctorCard img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #ff6f61;
+}
+
+.doctorCard:hover {
+  transform: translateY(-5px);
+  background: #2c2c2c;
+}
+
+.bookButton {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bookButton:hover {
+  background-color: #ff3b2f;
+}
+
+.bookedButton {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: not-allowed;
+}

@@ -1,43 +1,35 @@
-import express from 'express'
-import cors from 'cors'
-import 'dotenv/config'
-import connectDB from './config/mongodb.js'
-import connectCloudinary from './config/cloudinary.js'
-import adminRouter from './routes/adminRoute.js'
-import doctorRouter from './routes/doctorRoute.js'
-import userRouter from './routes/userRoute.js'
-
-// app config
-const app = express()
-const port = process.env.PORT || 4000
-
-// Connect to database (CALL THE FUNCTION)
-connectDB()
-connectCloudinary()
-
-// middlewares
-app.use(express.json())
-app.use(cors())
-
-// api endpoints
-app.use('/api/admin', adminRouter)
-app.use('/api/doctor', doctorRouter)
-app.use("/api/user", userRouter)
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import authRoutes from './routes/auth.js';
+import doctorRoutes from './routes/doctor.js';
+import express from "express";
+import path from "path";
 
 
-app.get("/", (req, res) => {
-  res.send("API Working")
-});
 
-app.get('/test-db', (req, res) => {
-  const state = mongoose.connection.readyState;
-  // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
-  if (state === 1) {
-    res.send('Database is connected');
-  } else {
-    res.status(500).send('Database is NOT connected');
-  }
-});
+dotenv.config();
 
+const app = express();
+const __dirname = path.resolve();
 
-app.listen(port, () => console.log(`Server started on PORT:${port}`))
+app.use("/images", express.static(path.join(__dirname, "public/images")));
+
+app.listen(5000, () => console.log("Server running on port 5000"));
+
+app.use(cors());
+app.use(express.json());
+
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(()=>console.log('MongoDB connected'))
+.catch(err=>console.log(err));
+
+app.use('/api/auth', authRoutes);
+app.use('/api/doctors', doctorRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, ()=>console.log(`Server running on port ${PORT}`));
