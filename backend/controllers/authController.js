@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 // REGISTER
 export const registerUser = async (req, res) => {
   try {
+    console.log("REQUEST BODY:", req.body); 
     const { username, email, password } = req.body;
 
     // Check existing email
