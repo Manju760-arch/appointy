@@ -29,6 +29,8 @@ export default function Login() {
 
   return (
     <div className="login-container">
+     console.log("API URL =", process.env.REACT_APP_API);
+
       <div className="login-bg">
         <div className="login-box">
       <h2 className="heading">Login</h2>

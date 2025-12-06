@@ -18,6 +18,7 @@ export default function Home() {
     <div className="home-container">
       <div className="logo">🧬</div>
       <div className="title">Davis Health Care</div>
+      
        </div>
   );
 }
