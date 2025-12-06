@@ -12,8 +12,6 @@ const app = express();
 const __dirname = path.resolve();
 
 // Middlewares must come BEFORE routes
-import cors from "cors";
-
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -28,6 +26,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/appointment', appointmentRoutes);
+
 // Connect DB
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -36,6 +35,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
-// Start server ONCE
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
