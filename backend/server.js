@@ -1,43 +1,36 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import authRoutes from './routes/auth.js';
-import appointmentRoutes from './routes/appointmentRoutes.js';
 import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import cors from "cors";
 import path from "path";
 
-dotenv.config();
+import authRoutes from "./routes/auth.js";
+import appointmentRoutes from "./routes/appointmentRoutes.js";
 
+dotenv.config();
 const app = express();
 const __dirname = path.resolve();
 
-// Middlewares must come BEFORE routes
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}));
-
+// Middlewares
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static folder
-app.use("/images", express.static(path.join(__dirname, "public/images")));
+// API Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/appointment", appointmentRoutes);
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/appointment', appointmentRoutes);
-// Serve React frontend (production)
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+// Serve frontend (optional)
+app.use(express.static(path.join(__dirname, "/public")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
-// Connect DB
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+
+// MongoDB
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log(err));
 
 // Start server
 const PORT = process.env.PORT || 5000;
