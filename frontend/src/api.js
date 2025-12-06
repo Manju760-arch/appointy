@@ -1,1 +1,1 @@
-export const API = "http://localhost:5000";
+export const API = "https://appointy-x5ue.onrender.com";

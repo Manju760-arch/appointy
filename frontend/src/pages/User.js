@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { API } from "../api";
 
 export default function UsersTable() {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/users")
+    fetch(`${API}/api/auth/users`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));

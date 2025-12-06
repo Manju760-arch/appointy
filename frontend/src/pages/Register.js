@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link} from "react-router-dom";
 import "../styles/register.css";
-const API_URL = "http://localhost:5000";
+import { API } from "../api";
+
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ export default function Register() {
       alert("Passwords do not match");
       return;
     }
-    const res = await fetch(`${API_URL}/api/auth/register`, {
+    const res = await fetch(`${API}/api/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, password }),

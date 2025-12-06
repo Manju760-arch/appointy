@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from "react";
 import "../styles/appointment.css";
+import { API } from "../api";
+
 const Appointment = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -20,7 +22,7 @@ const Appointment = () => {
   
   const handleSubmit = async (e) => {
   e.preventDefault();
-  const res = await fetch("http://localhost:5000/api/appointment", {
+  const res = await fetch(`${API}/api/appointment`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, phone, dob, doctor, date, time}),
