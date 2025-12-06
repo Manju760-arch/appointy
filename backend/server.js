@@ -26,7 +26,11 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/appointment', appointmentRoutes);
-
+// Serve React frontend (production)
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 // Connect DB
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
