@@ -10,7 +10,6 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-import cors from "cors";
 app.use(cors({
   origin: "*",
   credentials: true
