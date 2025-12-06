@@ -2,29 +2,21 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import path from "path";
 
 import authRoutes from "./routes/auth.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
 
 dotenv.config();
 const app = express();
-const __dirname = path.resolve();
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// API Routes
+// API Routes ONLY
 app.use("/api/auth", authRoutes);
 app.use("/api/appointment", appointmentRoutes);
-
-// Serve frontend (optional)
-app.use(express.static(path.join(__dirname, "/public")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
 
 // MongoDB
 mongoose
