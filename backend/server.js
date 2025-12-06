@@ -12,7 +12,13 @@ const app = express();
 const __dirname = path.resolve();
 
 // Middlewares must come BEFORE routes
-app.use(cors());
+import cors from "cors";
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
