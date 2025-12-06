@@ -1,0 +1,100 @@
+.about-container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.about-container div{
+    background-color: white;
+   margin:10px;
+   padding: 10px;
+}
+.one-title{
+    margin-top: 150px;
+    font-family: 700;
+    color: blue;
+    font-size: 50px;
+    margin-left: 70px;
+    font-weight: bold;
+   animation: slideDown 1.5s ease-out forwards;
+} 
+.one-content{
+    margin-top: 30px;
+    margin-left: 70px;
+    animation: slideDown 1.5s ease-out forwards;
+    line-height: 1.8;
+}
+.one-img{
+    height: 800px;
+    width: 800px;
+}
+.about-link{
+    color:blue;
+    text-decoration: underline;
+}
+.about-team{
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+.team-title{
+     padding-top: 100px;
+     padding-bottom: 100px;
+    background: transparent;
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+     padding-left: 100px;
+    padding-right: 100px;
+}
+.team-image{
+    display: flex;
+    flex-wrap: wrap;
+}
+.team-content{
+    background-color: black;
+    color: white;
+    padding-top: 14px;
+    height: 120px;
+    width: 280px;
+    padding-left: 90px;
+}
+.about-office{
+    background-color: #95a5a6;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.loc{
+    text-align: center;
+    
+}
+.location {
+    background-color: blue;  /* Blue background */
+    color: white;            /* Make text visible */
+    min-height: 500px;
+    padding: 40px;           /* Adds spacing inside */
+}
+
+.location .loc {
+    background: transparent; /* Ensure inner div is transparent */
+}
+.location .loc-head{
+     background: transparent;
+     color: white;
+     font-size: 50px;
+     font-weight: bold;
+     margin-bottom: 30px;
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.location p {
+    margin-top: 40px;
+    background: transparent; /* Paragraph background transparent */
+    margin-bottom: 20px; 
+    height: 140px;
+    font-size: 20px;
+    padding-top: 15px;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    color: white    /* Optional spacing between offices */
+}
+

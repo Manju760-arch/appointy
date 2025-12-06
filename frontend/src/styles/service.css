@@ -1,0 +1,78 @@
+.model1{
+    height: 500px;
+    background-color: aqua;
+}
+.white{
+    margin-left: 150px;
+    margin-right: 100px;
+    background-color: white;
+    text-align: center;
+    height: 300px;
+    width: 1000px;
+    padding-top: 50px;
+}
+.onehead{
+    font-size: 70px;
+    font-weight: bold;
+    color: navy;
+    margin-bottom: 40px;
+}
+.onecontent{
+    font-weight: bold;
+    font-size: 30px;}
+.blue{
+    background-color: #95a5a6;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.blue-head{
+    color: navy;
+    font-weight: bold;
+    font-size: 50px;
+      padding-bottom: 50px;
+}
+.blue-content{
+    line-height: 1.5rem;
+     padding-bottom: 50px;
+}
+.service-image{
+    padding-top: 100px;
+    background-color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    gap: 70px;
+}
+.services{
+    background-color: white;
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    padding-top: 100px;
+}
+.services-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px; /* space between the two lists */
+}
+
+.audit, .hearing {
+  width: 50%; /* each takes half width */
+}
+
+.audit ul, .hearing ul {
+  padding-left: 20px;
+  padding-bottom: 80px;
+}
+
+.audithead, .hearinghead {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: blue;
+  padding-bottom: 50px;
+}

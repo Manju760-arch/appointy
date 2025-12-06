@@ -24,3 +24,14 @@ button {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}

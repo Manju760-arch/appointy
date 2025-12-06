@@ -1,0 +1,107 @@
+
+.blog-container{
+    background-color: #95a5a6;
+   height: 100vh;
+}
+.para{
+    background: transparent;
+}
+.blog-title{
+    padding-top: 100px;
+    background: transparent;
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.line{
+    margin-top: 50px;
+    margin-left:300px ;
+    height: 7px;
+    width: 100px;
+    background-color: black;
+}
+.blog-para{
+     margin-top: 50px;
+    margin-left:260px ;
+    margin-right: 100px;
+    text-align: center;
+}
+.card1{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    text-align: center;
+}
+.card1{
+    margin-left: 200px;
+    margin-top: 200px;
+    margin-right: 200px;
+    min-height: 500px;
+}
+.oneimage{
+    height: 400px;
+    width: 500px;
+}
+.paraone{
+    font-size: 20px;
+    height: 400px;
+    width: 300px;
+   
+}
+.card1{
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: white;
+    border-radius: 40px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.one-button{
+    margin-top: 40px;
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+}
+.card2{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    text-align: center;
+    min-height: 500px;
+}
+.card2{
+    margin-left: 200px;
+    margin-top: 200px;
+    margin-right: 200px;
+}
+.twoimage{
+    height: 400px;
+    width: 500px;
+}
+.paratwo{
+    font-size: 20px;
+    height: 400px;
+    width: 300px;
+   
+}
+.card2{
+    padding-left: 20px;
+    padding-top: 40px;
+    min-height: 500px;
+    margin-bottom: 80px;
+    background-color: white;
+    border-radius: 40px;
+
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.twobutton{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+}

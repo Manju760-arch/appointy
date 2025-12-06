@@ -1,0 +1,18 @@
+.admin{
+    background-color: white;
+    min-height: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 10px;
+}
+.adminlogin{
+    height: 600px;
+    width: 500px;
+}
+
+.imad{
+    height: 300px;
+    width: 400px;
+}

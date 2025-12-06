@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Science+Gothic:wght@100..900&display=swap');
+.overview-banner {
+  background-image: url("../assets/overview1.avif");
+    background-size: cover;
+    padding: 40px 20px;
+  height: 700px;   
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-content: center;
+
+}
+.overview{
+    font-family: "Poppins", sans-serif;
+    min-height: 500px;  
+    background-color: white; 
+}
+.textone{
+    background: transparent;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    animation: slideDown 1.5s ease-out forwards;
+
+}
+.texttwo{
+    font-size: 30px;
+   background: transparent;
+    color: white;
+    text-align: center;
+     animation: slideDown 1.5s ease-out forwards;
+
+} 
+@keyframes slideDown {
+    0%{
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.overview-two{
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+}
+.two-title{
+    margin-top: 200px;
+    font-family: 700;
+    color: blue;
+    font-size: 50px;
+    margin-left: 70px;
+    font-weight: bold;
+   animation: slideDown 1.5s ease-out forwards;
+}
+.two-content{
+    margin-left: 70px;
+    padding-top: 60px;
+      padding-right: 50px;
+      text-align: justify;
+      font-weight: 100;
+       animation: slideDown 1.5s ease-out forwards;
+}
+.two-button{
+    margin-top: 40px;
+    height: 40px;
+    width: 150px;
+    margin-left: 70px;
+    background: transparent;
+    background-color: orangered;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 10px;
+     animation: slideDown 1.5s ease-out forwards;
+
+}.overview-three{
+    margin-top: 100px;
+}
+.three-title{
+    font-family: 700;
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px ;
+    margin-right: 40px;
+    font-weight: bold;
+      animation: slideDown 1.5s ease-out forwards;
+
+}
+.three-content{
+    margin-left: 140px ;
+    margin-right: 140px;
+    padding-top: 70px;
+      animation: slideDown 1.5s ease-out forwards;
+
+}
+.overview-four{
+    margin-top: 150px;
+}
+.four-title{
+    font-family: 700;
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+.gallery-container{
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.four-img{
+    height: 300px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 20px;
+
+}
+.four-img:hover{
+    transform: translateY(-20px);
+}
+.overview-five{
+    margin-top: 180px;
+}
+.five-head{
+    font-family: 700;
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+.five-sub{
+    margin-top: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+.five-content{
+       margin-top: 40px;
+     font-size: 20px;
+       text-align: center;
+       
+}
+.text-slider {
+  position: relative;
+  width: 400px;            /* Adjust width */
+  height: 100px;           /* Adjust height */
+  margin: 100px auto;      /* Center horizontally */
+  display: flex;
+  align-items: center;     /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  overflow: visible;       /* Allow blur outside */
+}
+
+.text-slider span {
+  position: absolute;
+  opacity: 0;
+  filter: blur(4px);
+  animation: fadeWords 8s linear infinite;
+}
+
+.text-slider span:nth-child(1) { animation-delay: 0s; }
+.text-slider span:nth-child(2) { animation-delay: 2s; }
+.text-slider span:nth-child(3) { animation-delay: 4s; }
+.text-slider span:nth-child(4) { animation-delay: 6s; }
+
+@keyframes fadeWords {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  25% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  35% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+.text-slider{
+    color: blue;
+    
+}
+.span{
+    color: blue;
+     font-size: 50px;
+     font-weight: bold;
+}
+.loc{
+    text-align: center;
+    
+}
+.location {
+    background-color: blue;  /* Blue background */
+    color: white;            /* Make text visible */
+    min-height: 500px;
+    padding: 40px;           /* Adds spacing inside */
+}
+
+.location .loc {
+    background: transparent; /* Ensure inner div is transparent */
+}
+.location .loc-head{
+     background: transparent;
+     color: white;
+     font-size: 50px;
+     font-weight: bold;
+     margin-bottom: 30px;
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.location p {
+    margin-top: 40px;
+    background: transparent; /* Paragraph background transparent */
+    margin-bottom: 20px; 
+    height: 140px;
+    font-size: 20px;
+    padding-top: 15px;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    color: white    /* Optional spacing between offices */
+}
+

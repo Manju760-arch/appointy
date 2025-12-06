@@ -13,6 +13,8 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   bookedDoctors: [bookedDoctorSchema],
-});
+},
+{ timestamps: true } 
+);
 
 export default mongoose.model("User", userSchema);
