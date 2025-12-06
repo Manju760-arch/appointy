@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 // API Routes ONLY
 app.use("/api/auth", authRoutes);
 app.use("/api/appointment", appointmentRoutes);
+app.use((err, req, res, next) => {
+  res.status(500).json({ message: "Server Error", error: err.message });
+});
 
 // MongoDB
 mongoose
